@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/test/test",
+    "pages/commonSense/commonSense",
+    "pages/shoppingMall/shoppingMall",
+    "pages/signIn/signIn",
+    "pages/question/question"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "皮肤护理",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color": "#ccc",
+    "selectedColor": "#5E81D7",
+    "list":[{
+        "pagePath": "pages/test/test",
+        "text": "测试",
+        "iconPath": "./images/ico_test.png",
+        "selectedIconPath": "./images/ico_testact.png"
+      },{
+        "pagePath": "pages/commonSense/commonSense",
+        "text": "常识",
+        "iconPath": "./images/ico_sense.png",
+        "selectedIconPath": "./images/ico_senseact.png"
+      },{
+        "pagePath": "pages/shoppingMall/shoppingMall",
+        "text": "商城",
+        "iconPath": "./images/ico_shop.png",
+        "selectedIconPath": "./images/ico_shopact.png"
+      },{
+        "pagePath": "pages/signIn/signIn",
+        "text": "登录",
+        "iconPath": "./images/ico_user.png",
+        "selectedIconPath": "./images/ico_useract.png"
+      }]
+  }
+}

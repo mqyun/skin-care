@@ -1,0 +1,9 @@
+<!--pages/question/question.wxml-->
+<view class='question-box'>
+  <text class='question-tit'> {{question.queTit}} </text>
+  <radio-group class="radio-group" bindchange="checkAnswer">
+    <view wx:for="{{question.queAnswer}}" wx:key="{{question.queNum}}" class='radio-item'>
+      <radio value='{{item.toQueNum}}' /> {{item.answer}}
+    </view>
+  </radio-group>
+</view>

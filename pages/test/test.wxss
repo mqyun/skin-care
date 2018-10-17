@@ -1,0 +1,6 @@
+/* pages/test/test.wxss */
+.btn-start {
+  width: 360rpx;
+  background-color: #5E81D7;
+  color: #fff;
+}

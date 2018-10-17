@@ -1,0 +1,24 @@
+/* pages/question/question.wxss */
+.question-box {
+  padding: 100rpx 40rpx 0 40rpx;
+  text-align: left;
+}
+
+.question-tit {
+  color: #484848;
+  display: block;
+  margin-bottom: 50rpx;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-item {
+  margin-top: 20rpx;
+  border: 1rpx solid #dde5ed;
+  padding: 8px;
+  color: #666;
+  font-size: 28rpx;
+}
