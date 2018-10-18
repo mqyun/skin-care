@@ -8,10 +8,10 @@
     data-id='{{item.answerid}}'
     data-tonum='{{item.toQueNum}}'
     bindtap='checkAnswer'>
-    <view wx:if="{{item.answerid == checkAnsId}}" class='radio-icon active'>o</view>
+    <view wx:if="{{item.answerid == checkAnsId}}" class='radio-icon active'></view>
     <view wx:else class='radio-icon'></view>
     <text> {{item.answer}} </text>
   </view>
 </view>
-<button class='next-question' wx:if="{{isFinish}}">查看结果</button>
+<button class='next-question' wx:if="{{isFinish}}">查看测试结果</button>
 <button class='next-question' wx:else bindtap='getNextQuestion'>下一题</button>

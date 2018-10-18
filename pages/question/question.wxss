@@ -23,12 +23,13 @@
 .radio-icon {
   float: left;
   margin-right: 14rpx;
-  width: 24px;
-  height: 24px;
+  width: 22rpx;
+  height: 22rpx;
   border: 1rpx solid #dde5ed;
   text-align: center;
-  line-height: 24px;
+  line-height: 22rpx;
   color: #fff;
+  border-radius: 50%;
 }
 
 .radio-icon.active {

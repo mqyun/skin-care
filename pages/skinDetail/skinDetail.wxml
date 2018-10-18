@@ -1,15 +1,35 @@
 <!--pages/skinDetail/skinDetail.wxml-->
-<text>护理重点：</text>
-<text> {{skinData.key}} </text>
-<text>护理步骤（日间）：</text>
-<block
-  wx:for="{{skinData.steps.daytime}}"
-  wx:key="{{skinData.steps.daytime.name}}">
-  <text> {{item.name}} {{item.important}} {{item.proType}} </text>
-</block>
-<text>护理步骤（夜间）：</text>
-<block
-  wx:for="{{skinData.steps.nighttime}}"
-  wx:key="{{skinData.steps.nighttime.name}}">
-  <text> {{item.name}} {{item.important}} {{item.proType}} </text>
-</block>
+<view class='container'>
+  <view class='item-tit'>护理重点：</view>
+  <text> {{skinData.key}} </text>
+  <view class='item-tit'>护理步骤（日间）：</view>
+  <view class='item-tr tr-header'>
+    <view class='item-td'>步骤</view>
+    <view class='item-td'>重要程度</view>
+    <view class='item-td'>产品类型</view>
+  </view>
+  <block
+    wx:for="{{skinData.steps.daytime}}"
+    wx:key="{{skinData.steps.daytime.name}}">
+    <view class='item-tr'>
+      <view class='item-td'>{{item.name}}</view>
+      <view class='item-td'>{{item.important}}</view>
+      <view class='item-td'>{{item.proType}}</view>
+    </view>
+  </block>
+  <view class='item-tit'>护理步骤（夜间）：</view>
+  <view class='item-tr tr-header'>
+    <view class='item-td'>步骤</view>
+    <view class='item-td'>重要程度</view>
+    <view class='item-td'>产品类型</view>
+  </view>
+  <block
+    wx:for="{{skinData.steps.nighttime}}"
+    wx:key="{{skinData.steps.nighttime.name}}">
+    <view class='item-tr'>
+      <view class='item-td'>{{item.name}}</view>
+      <view class='item-td'>{{item.important}}</view>
+      <view class='item-td'>{{item.proType}}</view>
+    </view>
+  </block>
+</view>

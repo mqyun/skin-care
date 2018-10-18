@@ -1,1 +1,30 @@
 /* pages/skinDetail/skinDetail.wxss */
+.container {
+  padding-top: 0;
+}
+
+.item-tit {
+  margin: 30rpx 0 10rpx 0;
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #5E81D7;
+  color: #fff;
+}
+
+.item-tr {
+  width: 100%;
+  border-bottom: 1rpx solid #F3F5F7;
+  padding: 10rpx 0;
+  font-size: 26rpx;
+}
+
+.item-tr.tr-header {
+  background-color: #F3F5F7;
+}
+
+.item-td {
+  float: left;
+  width: 33%;
+  text-align: center;
+}

@@ -1,5 +1,5 @@
 // pages/question/question.js
-const getQuestionData = require('../../utils/data.js').getQuestionData
+const getQuestionData = require('../../utils/data.js').getQuestionData;
 
 Page({
 
@@ -34,6 +34,13 @@ Page({
 
   // 获取下一题
   getNextQuestion: function () {
+    if (!this.data.checkAnsId) {
+      wx.showToast({
+        icon: 'loading',
+        title: '请选择答案'
+      })
+      return false;
+    }
     this.setThisQuestion(this.data.nextQueNum);
   },
 
@@ -45,7 +52,8 @@ Page({
   // 设置当前题目
   setThisQuestion: function (queNum) {
     this.setData({
-      question: getQuestionData(queNum)
+      question: getQuestionData(queNum),
+      checkAnsId: ''
     })
   },
 
