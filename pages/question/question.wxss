@@ -10,15 +10,38 @@
   margin-bottom: 50rpx;
 }
 
-.radio-group {
-  display: flex;
-  flex-direction: column;
-}
-
 .radio-item {
+  display: flex;
+  align-items: center;
   margin-top: 20rpx;
   border: 1rpx solid #dde5ed;
   padding: 8px;
   color: #666;
   font-size: 28rpx;
+}
+
+.radio-icon {
+  float: left;
+  margin-right: 14rpx;
+  width: 24px;
+  height: 24px;
+  border: 1rpx solid #dde5ed;
+  text-align: center;
+  line-height: 24px;
+  color: #fff;
+}
+
+.radio-icon.active {
+  border-color: #1aad19;
+  background-color: #1aad19;
+}
+
+.next-question {
+  position: fixed;
+  bottom: 100rpx;
+  left: 50%;
+  margin-left: -150rpx;
+  width: 300rpx;
+  background-color: #1aad19;
+  color: #fff;
 }

@@ -1,0 +1,15 @@
+<!--pages/skinDetail/skinDetail.wxml-->
+<text>护理重点：</text>
+<text> {{skinData.key}} </text>
+<text>护理步骤（日间）：</text>
+<block
+  wx:for="{{skinData.steps.daytime}}"
+  wx:key="{{skinData.steps.daytime.name}}">
+  <text> {{item.name}} {{item.important}} {{item.proType}} </text>
+</block>
+<text>护理步骤（夜间）：</text>
+<block
+  wx:for="{{skinData.steps.nighttime}}"
+  wx:key="{{skinData.steps.nighttime.name}}">
+  <text> {{item.name}} {{item.important}} {{item.proType}} </text>
+</block>

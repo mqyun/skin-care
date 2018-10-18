@@ -7,19 +7,39 @@ Page({
    * 页面的初始数据
    */
   data: {
-    question: {}
+    question: {},
+    checkAnsId: '',
+    nextQueNum: '',
+    isFinish: false
   },
 
   // 选择答案
   checkAnswer: function (e) {
-    let nextQueNum = e.detail.value;
+    let answerId = e.currentTarget.dataset.id;
+    let nextQueNum = e.currentTarget.dataset.tonum;
+    this.setData({
+      checkAnsId: answerId,
+      nextQueNum: nextQueNum
+    })
     if (nextQueNum == 0) {
-      wx.showToast({
-        title: e.detail.value,
+      this.setData({
+        isFinish: true
       })
     } else {
-      this.setThisQuestion(nextQueNum);
+      this.setData({
+        isFinish: false
+      })
     }
+  },
+
+  // 获取下一题
+  getNextQuestion: function () {
+    this.setThisQuestion(this.data.nextQueNum);
+  },
+
+  // 查看测试结果
+  getTestResult: function () {
+
   },
 
   // 设置当前题目

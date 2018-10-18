@@ -1,18 +1,31 @@
 // pages/commonSense/commonSense.js
+const getSkinTypeData = require('../../utils/data.js').getSkinTypeData;
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    skinData: []
+  },
+
+  // 查看皮肤类型护理详情
+  toViewDetail: function (e) {
+    let parentId = e.currentTarget.dataset.parentid;
+    let sonId = e.currentTarget.dataset.sonid;
+    wx.navigateTo({
+      url: '../skinDetail/skinDetail?parentid=' + parentId + '&sonid=' + sonId
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({
+      skinData: getSkinTypeData()
+    })
   },
 
   /**

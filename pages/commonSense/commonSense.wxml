@@ -1,2 +1,20 @@
 <!--pages/commonSense/commonSense.wxml-->
-<text>pages/commonSense/commonSense.wxml</text>
+<view class='container'>
+  <block
+    wx:for="{{skinData}}"
+    wx:for-item="paritem"
+    wx:key="{{paritem.id}}">
+    <block
+      wx:for="{{paritem.sonType}}"
+      wx:for-item="sonitem"
+      wx:key="{{sonitem.id}}">
+      <view
+        class='parent-type-box'
+        data-parentid="{{paritem.id}}"
+        data-sonid="{{sonitem.id}}"
+        bindtap='toViewDetail'>
+        {{paritem.name}}({{sonitem.name}})
+      </view>
+    </block>
+  </block>
+</view>

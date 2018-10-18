@@ -1,9 +1,17 @@
 <!--pages/question/question.wxml-->
 <view class='question-box'>
   <text class='question-tit'> {{question.queTit}} </text>
-  <radio-group class="radio-group" bindchange="checkAnswer">
-    <view wx:for="{{question.queAnswer}}" wx:key="{{question.queNum}}" class='radio-item'>
-      <radio value='{{item.toQueNum}}' /> {{item.answer}}
-    </view>
-  </radio-group>
+  <view
+    class='radio-item'
+    wx:for="{{question.queAnswer}}"
+    wx:key="{{question.queAnswer.answerid}}"
+    data-id='{{item.answerid}}'
+    data-tonum='{{item.toQueNum}}'
+    bindtap='checkAnswer'>
+    <view wx:if="{{item.answerid == checkAnsId}}" class='radio-icon active'>o</view>
+    <view wx:else class='radio-icon'></view>
+    <text> {{item.answer}} </text>
+  </view>
 </view>
+<button class='next-question' wx:if="{{isFinish}}">查看结果</button>
+<button class='next-question' wx:else bindtap='getNextQuestion'>下一题</button>

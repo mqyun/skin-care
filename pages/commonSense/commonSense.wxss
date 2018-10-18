@@ -1,1 +1,14 @@
 /* pages/commonSense/commonSense.wxss */
+.container {
+  padding-top: 30rpx;
+}
+
+.parent-type-box {
+  margin-top: 40rpx;
+  width: 600rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #5E81D7;
+  color: #fff;
+  border-radius: 15rpx;
+}

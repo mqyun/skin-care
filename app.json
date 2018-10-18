@@ -4,7 +4,8 @@
     "pages/commonSense/commonSense",
     "pages/shoppingMall/shoppingMall",
     "pages/signIn/signIn",
-    "pages/question/question"
+    "pages/question/question",
+    "pages/skinDetail/skinDetail"
   ],
   "window":{
     "backgroundTextStyle":"light",
