@@ -19,3 +19,8 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.btn-bind {
+  background-color: #5E81D7;
+  color: #fff;
+}

@@ -10,13 +10,17 @@ Page({
     question: {},
     checkAnsId: '',
     nextQueNum: '',
-    isFinish: false
+    isFinish: false,
+    parentType: '',
+    sonType: ''
   },
 
   // 选择答案
   checkAnswer: function (e) {
     let answerId = e.currentTarget.dataset.id;
     let nextQueNum = e.currentTarget.dataset.tonum;
+    let type = e.currentTarget.dataset.type;
+    let typeval = e.currentTarget.dataset.typeval;
     this.setData({
       checkAnsId: answerId,
       nextQueNum: nextQueNum
@@ -28,6 +32,15 @@ Page({
     } else {
       this.setData({
         isFinish: false
+      })
+    }
+    if (type == 'parent') {
+      this.setData({
+        parentType: typeval
+      })
+    } else if (type == 'son') {
+      this.setData({
+        sonType: typeval
       })
     }
   },
@@ -46,7 +59,9 @@ Page({
 
   // 查看测试结果
   getTestResult: function () {
-
+    wx.navigateTo({
+      url: '../testResult/testResult?parentid=' + this.data.parentType + '&sonid=' + this.data.sonType
+    })
   },
 
   // 设置当前题目

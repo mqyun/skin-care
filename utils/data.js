@@ -5,11 +5,15 @@ const questionData = [{
   "queAnswer": [{
     "answerid": 11,
     "answer": "干燥缺水",
-    "toQueNum": 2
+    "toQueNum": 2,
+    "type": 'parent',
+    "typeVal": 1
   }, {
     "answerid": 12,
     "answer": "出油过多",
-    "toQueNum": 3
+    "toQueNum": 3,
+    "type": 'parent',
+    "typeVal": 2
   }]
 }, {
   "queNum": 2,
@@ -17,11 +21,15 @@ const questionData = [{
   "queAnswer": [{
     "answerid": 21,
     "answer": "干性缺水型",
-    "toQueNum": 7
+    "toQueNum": 7,
+    "type": 'son',
+    "typeVal": 11
   }, {
     "answerid": 22,
     "answer": "外油内干型",
-    "toQueNum": 7
+    "toQueNum": 7,
+    "type": 'son',
+    "typeVal": 12
   }]
 }, {
   "queNum": 3,
@@ -29,11 +37,15 @@ const questionData = [{
   "queAnswer": [{
     "answerid": 31,
     "answer": "油性旺盛型",
-    "toQueNum": 8
+    "toQueNum": 8,
+    "type": 'son',
+    "typeVal": 21
   }, {
     "answerid": 32,
     "answer": "外油内干型",
-    "toQueNum": 8
+    "toQueNum": 8,
+    "type": 'son',
+    "typeVal": 22
   }]
 }, {
   "queNum": 7,
@@ -41,15 +53,21 @@ const questionData = [{
   "queAnswer": [{
     "answerid": 71,
     "answer": "【I级】潜在缺水",
-    "toQueNum": 0
+    "toQueNum": 0,
+    "type": 'grade',
+    "typeVal": 0
   }, {
     "answerid": 72,
     "answer": "【II级】轻度缺水",
-    "toQueNum": 0
+    "toQueNum": 0,
+    "type": 'grade',
+    "typeVal": 0
   }, {
     "answerid": 73,
     "answer": "【III级】重度缺水",
-    "toQueNum": 0
+    "toQueNum": 0,
+    "type": 'grade',
+    "typeVal": 0
   }]
 }, {
   "queNum": 8,
@@ -57,15 +75,21 @@ const questionData = [{
   "queAnswer": [{
     "answerid": 81,
     "answer": "【I级】潜在油腻",
-    "toQueNum": 0
+    "toQueNum": 0,
+    "type": 'grade',
+    "typeVal": 0
   }, {
     "answerid": 82,
     "answer": "【II级】轻度油腻",
-    "toQueNum": 0
+    "toQueNum": 0,
+    "type": 'grade',
+    "typeVal": 0
   }, {
     "answerid": 83,
     "answer": "【III级】重度油腻",
-    "toQueNum": 0
+    "toQueNum": 0,
+    "type": 'grade',
+    "typeVal": 0
   }]
 }];
 
@@ -293,6 +317,7 @@ const getSkinTypeData = (parentType, sonType) => {
     for (let item of skinTypeData) {
       for (let sonitem of item.sonType) {
         if (item.id == parentType && sonitem.id == sonType) {
+          sonitem.parentName = item.name;
           return sonitem
         }
       }

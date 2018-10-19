@@ -3,9 +3,10 @@
     "pages/test/test",
     "pages/commonSense/commonSense",
     "pages/shoppingMall/shoppingMall",
-    "pages/signIn/signIn",
+    "pages/index/index",
     "pages/question/question",
-    "pages/skinDetail/skinDetail"
+    "pages/skinDetail/skinDetail",
+    "pages/testResult/testResult"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -32,7 +33,7 @@
         "iconPath": "./images/ico_shop.png",
         "selectedIconPath": "./images/ico_shopact.png"
       },{
-        "pagePath": "pages/signIn/signIn",
+        "pagePath": "pages/index/index",
         "text": "登录",
         "iconPath": "./images/ico_user.png",
         "selectedIconPath": "./images/ico_useract.png"
