@@ -1,2 +1,13 @@
 <!--pages/shoppingMall/shoppingMall.wxml-->
-<text>pages/shoppingMall/shoppingMall.wxml</text>
+<view class='shop-item'
+  wx:for="{{shopData}}"
+  wx:key="{{item.id}}"
+  data-id="{{item.id}}"
+  bindtap='toShopDetail'>
+  <image
+    src='{{item.image}}'
+    class='item-img'></image>
+  <view class='item-ename'>{{item.ename}}</view>
+  <view class='item-cname'>{{item.cname}}</view>
+  <view class='item-price'>{{item.price}}</view>
+</view>

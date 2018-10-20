@@ -309,6 +309,45 @@ const skinTypeData = [{
   }]
 }];
 
+// 商城数据
+const shopData = [{
+  id: 1,
+  ename: 'SK-II',
+  cname: 'SK-II护肤精华露 “神仙水”',
+  price: '￥590.00',
+  image: 'https://ssl2.sephorastatic.cn/products/2/7/2/2/1/1/1_n_06178_180x180.jpg'
+}, {
+  id: 2,
+  ename: 'SK-II',
+  cname: 'SK-II肌因光蕴环采钻白精华露（小灯泡)',
+  price: '1040.00',
+  image: 'https://ssl1.sephorastatic.cn/products/3/5/1/1/1/5/1_n_06178_180x180.jpg'
+}, {
+  id: 3,
+  ename: 'CAUDALIE',
+  cname: '欧缇丽葡萄水保湿舒缓喷雾双支装惠选套装',
+  price: '260.00',
+  image: 'https://ssl4.sephorastatic.cn/products/V/S/1/0/0/0/2/8/9/1_n_06633_180x180.jpg'
+}, {
+  id: 4,
+  ename: 'LANCOME',
+  cname: '兰蔻清滢柔肤水（粉水）',
+  price: '￥320.00',
+  image: 'https://ssl4.sephorastatic.cn/products/8/7/2/7/1/1_n_05470_180x180.jpg'
+}, {
+  id: 5,
+  ename: 'GUERLAIN',
+  cname: '娇兰帝皇蜂姿黄金复原蜜*明星套装',
+  price: '￥680.00',
+  image: 'https://ssl4.sephorastatic.cn/products/4/5/4/8/4/6/1_n_06625_180x180.jpg'
+}, {
+  id: 6,
+  ename: 'DrJart',
+  cname: '蒂佳婷水动力面膜套装(6盒装面膜)',
+  price: '￥580.00',
+  image: 'https://ssl1.sephorastatic.cn/products/4/2/8/2/8/1/1_n_05914_180x180.jpg'
+}];
+
 // 获取护理知识
 const getSkinTypeData = (parentType, sonType) => {
   if (!parentType && !sonType) {
@@ -325,7 +364,21 @@ const getSkinTypeData = (parentType, sonType) => {
   }
 }
 
+// 获取商城数据
+const getShopData = (id) => {
+  if (!id) {
+    return shopData
+  } else {
+    for (let item of shopData) {
+      if (item.id = id) {
+        return item
+      }
+    }
+  }
+}
+
 module.exports = {
   getQuestionData,
-  getSkinTypeData
+  getSkinTypeData,
+  getShopData
 }

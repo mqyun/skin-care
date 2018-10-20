@@ -1,5 +1,5 @@
 <!--pages/testResult/testResult.wxml-->
 <view class='container'>
   <view class='item-tit'>皮肤类型：{{skinData.parentName}}（{{skinData.name}}）</view>
-  <view class='item-tit' bindtap='toViewDetail'>查看护理步骤</view>
+  <view class='item-tit get-type' bindtap='toViewDetail'>查看护理步骤</view>
 </view>

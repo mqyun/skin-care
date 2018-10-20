@@ -1,21 +1,17 @@
-/* pages/shoppingMall/shoppingMall.wxss */
-.shop-item {
-  float: left;
-  width: 50%;
-  padding: 0 40rpx 40rpx 40rpx;
-  box-sizing: border-box;
-  border-right: 1px solid #f7f7f7;
-  border-bottom: 1px solid #f7f7f7;
+/* pages/shopDetail/shopDetail.wxss */
+.shop-img {
+  width: 100%;
 }
 
-.item-img {
-  width: 100%;
+.item-info-box {
+  padding-left: 50rpx;
 }
 
 .item-ename {
   width: 100%;
   font-weight: 600;
   font-size: 26rpx;
+  padding-bottom: 8px;
 }
 
 .item-cname {
@@ -25,12 +21,15 @@
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 26rpx;
+  border-bottom: 1px solid #ddd;
 }
 
 .item-price {
   width: 100%;
+  margin-top: 30rpx;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 26rpx;
+  font-size: 40rpx;
+  color: #000;
 }

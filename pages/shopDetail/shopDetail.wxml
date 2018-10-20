@@ -1,0 +1,9 @@
+<!--pages/shopDetail/shopDetail.wxml-->
+<image
+  class='shop-img' src='{{shopInfo.image}}'
+  mode='aspectFit'></image>
+<view class='item-info-box'>
+  <view class='item-ename'>{{shopInfo.ename}}</view>
+  <view class='item-cname'>{{shopInfo.cname}}</view>
+  <view class='item-price'>{{shopInfo.price}}</view>
+</view>
