@@ -1,6 +1,18 @@
 /* pages/test/test.wxss */
+.container {
+  padding-top: 400rpx;
+  height: 100vh;
+  background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1540215560128&di=10b89f0cdfdd63e478b3c7ec688b33b0&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201405%2F30%2F20140530231002_H8Mv3.jpeg) no-repeat;
+  background-size: 100%;
+}
+
 .btn-start {
-  width: 360rpx;
-  background-color: #5E81D7;
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #B0E0E6;
+  text-align: center;
+  line-height: 200rpx;
+  border-radius: 50%;
   color: #fff;
+  box-shadow: 10rpx 10rpx 5rpx #999;
 }
