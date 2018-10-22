@@ -1,0 +1,8 @@
+<!--pages/history/history.wxml-->
+<view class='container'>
+  <view class='header'>测试历史记录</view>
+  <view class='item'
+    wx:for="{{history}}"
+    wx:key="{{history}}">{{item.parentName}}（{{item.name}}）</view>
+  <view class="btn-del" bindtap='delHistory'>删除所有历史记录</view>
+</view>

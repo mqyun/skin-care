@@ -59,6 +59,9 @@ Page({
 
   // 查看测试结果
   getTestResult: function () {
+    var history = wx.getStorageSync('history') || []
+    history.unshift(this.data.parentType + ',' + this.data.sonType)
+    wx.setStorageSync('history', history)
     wx.navigateTo({
       url: '../testResult/testResult?parentid=' + this.data.parentType + '&sonid=' + this.data.sonType
     })

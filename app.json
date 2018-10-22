@@ -1,13 +1,14 @@
 {
   "pages":[
     "pages/test/test",
+    "pages/index/index",
     "pages/commonSense/commonSense",
     "pages/shoppingMall/shoppingMall",
-    "pages/index/index",
     "pages/question/question",
     "pages/skinDetail/skinDetail",
     "pages/testResult/testResult",
-    "pages/shopDetail/shopDetail"
+    "pages/shopDetail/shopDetail",
+    "pages/history/history"
   ],
   "window":{
     "backgroundTextStyle":"light",

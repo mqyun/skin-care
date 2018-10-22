@@ -9,7 +9,7 @@
 .btn-start {
   width: 200rpx;
   height: 200rpx;
-  background-color: #B0E0E6;
+  background-color: #49afcd;
   text-align: center;
   line-height: 200rpx;
   border-radius: 50%;

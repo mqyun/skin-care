@@ -14,6 +14,29 @@ Page({
       url: '../logs/logs'
     })
   },
+  // 退出登录
+  toLogout: function () {
+    let _this = this;
+    wx.showModal({
+      title: '提示',
+      content: '确认要退出登录吗？',
+      success: function (e) {
+        if (e.confirm) {
+          app.globalData.userInfo = {}
+          _this.setData({
+            userInfo: {},
+            hasUserInfo: false
+          })
+        }
+      }
+    })
+  },
+  // 查看测试历史
+  getHistory: function () {
+    wx.navigateTo({
+      url: '../history/history'
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
@@ -43,7 +66,6 @@ Page({
     }
   },
   getUserInfo: function(e) {
-    console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,

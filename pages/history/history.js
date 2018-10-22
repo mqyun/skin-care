@@ -1,4 +1,4 @@
-// pages/testResult/testResult.js
+// pages/history/history.js
 const getSkinTypeData = require('../../utils/data.js').getSkinTypeData;
 
 Page({
@@ -7,17 +7,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    parentId: '',
-    sonId: '',
-    skinData: {}
+    history: []
   },
 
-  // 查看皮肤类型护理详情
-  toViewDetail: function (e) {
-    let parentId = e.currentTarget.dataset.parentid;
-    let sonId = e.currentTarget.dataset.sonid;
-    wx.navigateTo({
-      url: '../skinDetail/skinDetail?parentid=' + this.data.parentId + '&sonid=' + this.data.sonId
+  delHistory: function () {
+    let _this = this;
+    wx.showModal({
+      title: '提示',
+      content: '确定要清空历史记录吗？',
+      success: function (e) {
+        if (e.confirm) {
+          wx.removeStorageSync('history')
+          _this.setData({
+            history: []
+          })
+        }
+      }
     })
   },
 
@@ -25,12 +30,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let parentId = options.parentid;
-    let sonId = options.sonid;
+    let historyStorage = wx.getStorageSync('history') || [];
+    let history = [];
+    for (let item of historyStorage) {
+      let parentId = item.split(',')[0];
+      let sonId = item.split(',')[1];
+      history.push(getSkinTypeData(parentId, sonId))
+    }
     this.setData({
-      parentId,
-      sonId,
-      skinData: getSkinTypeData(parentId, sonId)
+      history
     })
   },
 
