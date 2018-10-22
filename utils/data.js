@@ -370,7 +370,7 @@ const getShopData = (id) => {
     return shopData
   } else {
     for (let item of shopData) {
-      if (item.id = id) {
+      if (item.id == id) {
         return item
       }
     }
